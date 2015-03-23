@@ -1,0 +1,528 @@
+/*
+Theme Name: UBC BIKE RAVE 2013
+Theme URI: http://ubcbikerave.com
+Description: A HTML5 theme for UBC Bike Rave 2013.
+Author: Tony Li
+Author URI: http://tonyli.ca
+ */
+
+/* =================================== RESET =================================== */
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+article, aside, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+
+img, object, embed {
+    max-width: 100%;
+    border-radius: 0px;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    color: #ffffff;
+
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    outline: none;
+    text-decoration: none;
+}
+
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted #000;
+    cursor: help;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+dt, dd, li, ol, ul {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+input[type="radio"] {
+    vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+    vertical-align: bottom;
+    *vertical-align: baseline;
+}
+
+ins {
+    background-color: #fcd700;
+    color: #000;
+    text-decoration: none;
+}
+
+mark {
+    background-color: #fcd700;
+    color: #000;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+pre {
+    white-space: pre; /* CSS2 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word; /* IE */
+}
+
+pre, code, kbd, samp {
+    font-family: monospace, sans-serif;
+}
+
+select, input, textarea {
+    font: 99% sans-serif;
+}
+
+small {
+    font-size: 85%;
+}
+
+strong, th {
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: inherit;
+}
+
+td, td img {
+    vertical-align: top;
+}
+
+td {
+    font-weight: normal;
+    vertical-align: top;
+}
+
+th {
+    font-weight: bold;
+    vertical-align: bottom;
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/* hand cursor on clickable elements */
+.clickable, label, input[type=button], input[type=submit], button {
+    cursor: pointer;
+}
+
+/* clear floats */
+.clearfix:before, .clearfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+/* =================================== BROWSERS =================================== */
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+    margin: 0;
+}
+
+/* make buttons play nice in IE */
+button {
+    width: auto;
+    overflow: visible;
+}
+
+/* scale images in IE7 more attractively */
+.ie7 img {
+    -ms-interpolation-mode: bicubic;
+}
+
+/* prevent BG image flicker upon hover */
+.ie6 html {
+    filter: expression(document.execCommand("BackgroundImageCache", false, true));
+}
+
+/* =================================== FONTS =================================== */
+
+@font-face {
+    font-family: 'monoton';
+    src: url('/fonts/monoton.eot');
+    src: url('/fonts/monoton.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/monoton.woff') format('woff'),
+    url('/fonts/monoton.ttf') format('truetype'),
+    url('/fonts/monoton.svg#monoton') format('svg');
+}
+
+@font-face {
+    font-family: 'sullivan';
+    src: url('/fonts/sullivan.eot');
+    src: url('/fonts/sullivan.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/sullivan.woff') format('woff'),
+    url('/fonts/sullivan.ttf') format('truetype'),
+    url('/fonts/sullivan.svg#sullivan') format('svg');
+}
+
+@font-face {
+    font-family: 'ostrich';
+    src: url('/fonts/ostrich.eot');
+    src: url('/fonts/ostrich.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/ostrich.woff') format('woff'),
+    url('/fonts/ostrich.ttf') format('truetype'),
+    url('/fonts/ostrich.svg#ostrich') format('svg');
+}
+
+@font-face {
+    font-family: 'vagrounded';
+    src: url('/fonts/vagrounded.eot');
+    src: url('/fonts/vagrounded.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/vagrounded.woff') format('woff'),
+    url('/fonts/vagrounded.ttf') format('truetype'),
+    url('/fonts/vagrounded.svg#vagrounded') format('svg');
+}
+
+/* =================================== STANDARD CUSTOM DEFAULTS =================================== */
+
+.block {
+    display: block;
+}
+
+/* clear (used for horizontal thumbnails) */
+.clearing {
+    clear: both;
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    float: none;
+}
+
+.hidden {
+    display: none;
+}
+
+img.round {
+    border-radius: 5px;
+}
+
+img.round10 {
+    border-radius: 10px;
+}
+
+.downbar {
+    display: inline-block;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+/* =================================== TYPOGRAPHY =================================== */
+
+a {
+    color: #ffffff;
+}
+
+a:hover, a:active {
+    color: #42fe00;
+}
+
+nav a {
+    color: #000000;
+}
+
+nav a:hover, nav a:active {
+    color: #ffffff;
+}
+
+footer a {
+    color: #ffae00;
+}
+
+footer a:hover, foother a:active {
+    color: #ffffff;
+}
+
+h1 {
+    font-family: 'monoton', sans-serif;
+    font-weight: 400;
+    color: #42fe00;
+}
+
+h2 {
+    font-family: 'sullivan', sans-serif;
+    font-size: 100px;
+    font-weight: 400;
+    color: #42fe00;
+}
+
+p {
+    margin: 0 0 32px 0;
+    font-family: 'vagrounded', sans-serif;
+    font-size: 22px;
+    line-height: 28px;
+    color: #ffae00;
+}
+
+.oblique {
+    font-style: oblique;
+}
+
+.colorBlue { color : #01e4ff; }
+.colorWhite { color : #ffffff; }
+.colorYellow { color : #fff200; }
+.colorRed { color : red; }
+/* .colorYellow { color : #fff200; } */
+/* .colorRed { color : #ff00ff; } */
+
+/* =================================== BODY =================================== */
+
+body {
+    width: 100%;
+    background: #111111;
+    text-align: center;
+}
+
+/* =================================== HEADER/NAVIGATION =================================== */
+
+#bar {
+    position: absolute;
+    width: 960px;
+    top: 250px;
+    background: #111111;
+}
+
+#bar.fixed {
+    position: fixed;
+    padding: 16px 0 0 0;
+    top: 0px;
+    box-shadow: 0 5px 15px 5px #111111;
+}
+
+nav {
+    height: 176px;
+    background: url('/img/bike.png') center center no-repeat;
+}
+
+
+nav li {
+    margin: 0 40px 0 0;
+    font-family: 'ostrich', sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    font-style: oblique;
+    color: #000000;
+    float: left;
+}
+
+.navRow-1 {
+    margin: 60px 0 0 0;
+    padding: 0 360px 0 0;
+    float: right;
+    display: block;
+    clear: both;
+}
+
+.navRow-2 {
+    margin: 25px 0 0 0;
+    padding: 0 383px 0 0;
+    float: right;
+    clear: both;
+}
+
+#scrollbar {
+    position: fixed;
+    width: 100%;
+    height: 32px;
+    padding: 8px 0 8px 16px;
+    margin: auto 0px;
+    bottom: 0px;
+    background: #111111;
+    box-shadow: 0 -10px 15px -5px #111111;
+}
+
+#flip {
+    height: 32px;
+}
+
+.arrowUp {
+    transform:rotate(180deg);
+    -ms-transform:rotate(180deg); /* IE 9 */
+    -moz-transform:rotate(180deg); /* Firefox */
+    -webkit-transform:rotate(180deg); /* Safari and Chrome */
+    -o-transform:rotate(180deg); /* Opera */
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.twitter {
+    overflow: hidden;
+}
+
+/* =================================== CONTENT =================================== */
+
+.row-1 {
+    font-size: 175px;
+}
+
+.row-2 {
+    margin: 150px 0 0 0;
+    font-size: 135px;
+    font-style: oblique;
+}
+
+.row-3 {
+    font-size: 50px;
+}
+
+.padding-50px {
+    padding: 16px;
+}
+
+.section {
+    width: 960px;
+    min-height: 500px;
+    margin: 0 auto 500px auto;
+    display: block;
+}
+
+#sponsors {
+    margin: 0 auto 100px auto;
+    overflow: hidden;
+}
+
+.blockLeft {
+    width: 250px;
+    margin: 0 32px 0 0;
+    float: left;
+}
+
+.blockRight {
+    width: 678px;
+    float: left;
+    text-align: left;
+}
+
+#map {
+    margin: 0 0 32px 0;
+}
+
+#schedule-container {
+    width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.logo {
+    margin: 0 0 32px 0;
+}
+
+.logo-line {
+    float: left;
+    margin: 0 0 32px 32px;
+}
+
+.first {
+    margin: 0 0 32px 230px;
+}
+
+/* =================================== FOOTER =================================== */
+
+footer {
+    clear: both;
+}
+
+/* =================================== DEVELOPMENT =================================== */
+
+.maint {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
